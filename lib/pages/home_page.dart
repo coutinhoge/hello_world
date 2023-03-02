@@ -24,6 +24,54 @@ class _HomePageState extends State<HomePage> {
           style: TextStyle(color: Colors.white, fontSize: 30),
         )),
       ),
+      drawer: Drawer(
+        backgroundColor: Colors.blueGrey,
+        child: ListView(
+          children: [
+            UserAccountsDrawerHeader(
+              accountName: Text('Gabriel'),
+              accountEmail: Text('Gabriel@email.com'),
+              currentAccountPicture: CircleAvatar(
+                backgroundColor: Colors.grey,
+                child: Text('G'),
+              ),
+            ),
+            ListTile(
+              title: Text('item: 1'),
+              trailing: Icon(Icons.arrow_forward),
+              onTap: () {
+                _pageController.jumpToPage(0);
+                Navigator.pop(context);
+                setState(() {
+                  indexBottomNavigationBar = 0;
+                });
+              },
+            ),
+            ListTile(
+              title: Text('item: 2'),
+              trailing: Icon(Icons.arrow_forward),
+              onTap: () {
+                _pageController.jumpToPage(1);
+                Navigator.pop(context);
+                setState(() {
+                  indexBottomNavigationBar = 1;
+                });
+              },
+            ),
+            ListTile(
+              title: Text('item: 3'),
+              trailing: Icon(Icons.arrow_forward),
+              onTap: () {
+                _pageController.jumpToPage(2);
+                Navigator.pop(context);
+                setState(() {
+                  indexBottomNavigationBar = 2;
+                });
+              },
+            ),
+          ],
+        ),
+      ),
       body: PageView(
         controller: _pageController,
         children: [
