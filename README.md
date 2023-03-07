@@ -9,7 +9,7 @@
 
 <div align="center">
     <h3><i>Como Rodar?</i></h3>
-    <h3><i>- Baixe o projeto na sua máquina</i></h3>
+    <p><i>- Baixe o projeto na sua máquina</i></p>
     <p>Rode no CLI do seu SO ou IDE, dentro da pasta raiz do projeto... "flutter pub get"</p>
 </div>
 
